@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'com.diffplug.spotless' version '6.25.0'
+}
+
+group = 'com.roameo'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+spotless {
+    java {
+        importOrder()
+        removeUnusedImports()
+        googleJavaFormat()
+    }
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+    implementation 'org.springframework:spring-web:6.2.8'
+}
+
+test {
+    useJUnitPlatform()
+}
