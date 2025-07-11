@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Ignore all application configuration / env files
+src/main/resources/application.properties
+src/main/resources/.env
